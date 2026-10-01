@@ -1,0 +1,195 @@
+/* ==============================
+   空論/秒 - personal site
+   ============================== */
+
+:root {
+  --page-bg: #51b9e3;
+  --content-width: 414px;
+  --side-padding: 42px;
+
+ 
+  --font-main: PixelMplus12;
+
+  --text-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+.site {
+  width: min(100%, var(--content-width));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 42px var(--side-padding) 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ==============================
+   タイトル
+   ============================== */
+
+.site-header {
+  margin: 0 0 46px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+
+/* ==============================
+   リンク
+   ============================== */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.link-item {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  transition: transform 0.15s ease;
+}
+
+.link-item:hover {
+  transform: translateX(3px);
+}
+
+
+/* ==============================
+   アイコン画像
+   ============================== */
+
+
+
+.link-item img {
+  display: block;
+  width: auto;
+  height: 42px;
+
+  /* アイコンと文字の間 */
+  margin-right: 10px;
+}
+
+
+/* ==============================
+   リンク文字
+   ============================== */
+
+.link-label {
+  font-size: 17px;
+  line-height: 1;
+}
+
+
+/* ==============================
+   カラーボタン
+   ============================== */
+
+.link-button {
+  display: inline-block;
+  padding: 5px 9px 6px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.booth-button {
+  background: #ff4f4f;
+}
+
+.line-button {
+  background: #2fc42f;
+}
+
+
+/* ==============================
+   メイン画像
+   ============================== */
+
+.art {
+  margin-top: 88px;
+  display: flex;
+  justify-content: center;
+}
+
+.art img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ==============================
+   フッター
+   ============================== */
+
+footer {
+  margin-top: auto;
+  padding-top: 72px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+
+/* ==============================
+   PC
+   ============================== */
+
+@media (min-width: 415px) {
+  .site {
+    min-height: 100vh;
+  }
+}
+
+
+/* ==============================
+   小さいスマホ
+   ============================== */
+
+@media (max-width: 360px) {
+  :root {
+    --side-padding: 28px;
+  }
+
+  .site {
+    padding-top: 30px;
+  }
+
+  .site-header h1 {
+    font-size: 22px;
+  }
+}
