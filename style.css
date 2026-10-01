@@ -2,6 +2,10 @@
    空論/秒 - personal site
    ============================== */
 
+@font-face {
+  font-family: "PixelMplus12";
+  src: url("fonts/PixelMplus12-Regular.ttf") format("truetype");
+}
 :root {
   --page-bg: #51b9e3;
   --content-width: 414px;
